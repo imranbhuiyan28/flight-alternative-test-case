@@ -15,7 +15,7 @@ Feature: Test Case Project
     When    Search for pencil
     Then    verify search result pencil in url
 
-
+  @smoke
   Scenario: User can add a product to cart
 
     Given  Open target main page
@@ -37,7 +37,7 @@ Feature: Test Case Project
 
 
 
-
+  @smoke
   Scenario: hover cursor to fav
     Given   Open target main page
     When    search for pen

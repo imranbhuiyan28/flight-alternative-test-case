@@ -15,3 +15,6 @@ class MainPage(BasePage):
 
     def target_app_page(self):
         self.open_url("https://www.target.com/c/target-app/-/N-4th2r")
+
+    def open_sace_demo(self):
+        self.open_url('https://www.saucedemo.com/v1/')
