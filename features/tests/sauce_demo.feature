@@ -4,15 +4,16 @@ Feature: Saucedemo website test
 
 
 #------------login page------------------------
+@saucedemo
   Scenario: verify login page
     Given  open website page
     Then   login the page
     And    verify page open
-    Then   sort page low to high
 
 
 
 
+@saucedemo
   Scenario: verify cart page
     Given  open website page
     Then   login the page

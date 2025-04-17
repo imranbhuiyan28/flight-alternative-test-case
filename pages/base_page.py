@@ -83,6 +83,7 @@ class BasePage:
     def verify_text(self,expected_text, *locator):
         actual_text = self.find_element(*locator).text
         assert expected_text == actual_text, f"expected {expected_text} not in {actual_text}"
+        print(f"Text is verified")
 
     def verify_partial_url(self, expected_url, *locator):
         actual = self.driver.current_url

@@ -18,3 +18,6 @@ class MainPage(BasePage):
 
     def open_sace_demo(self):
         self.open_url('https://www.saucedemo.com/v1/')
+
+    def open_automation_website(self):
+        self.open_url("https://automationexercise.com/")
