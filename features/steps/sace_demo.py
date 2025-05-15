@@ -99,7 +99,7 @@ def fill_up(context):
 @then ('verify the page')
 def verify(context):
     verify_text = context.driver.find_element(*VERIFY).text
-    assert verify_text == "SauceCard #31337", f"test failed"
+    assert verify_text == "SauceCard #31338", f"test failed"
     print("test passed")
 
 
