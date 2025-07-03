@@ -21,3 +21,7 @@ class MainPage(BasePage):
 
     def open_automation_website(self):
         self.open_url("https://automationexercise.com/")
+
+
+    def open_alternative(self):
+        self.open_url("https://flights.flightalternative.com/")

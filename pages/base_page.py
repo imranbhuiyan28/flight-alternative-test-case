@@ -2,6 +2,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from support.logger import logger
+import time
 
 
 class BasePage:
@@ -70,6 +71,16 @@ class BasePage:
         self.driver.switch_to.window(window_id)
         print('Current window ', self.driver.current_window_handle)
 
+    #loading time
+    def measure_load_time(self, url, threshold=3):
+        start = time.time()
+        self.driver.get(url)
+        end = time.time()
+        load_time = end - start
+        print(f"Loading time: {load_time:.2f} seconds")
+        logger.info(f"Page load time: {load_time:.2f} seconds")
+        assert load_time < threshold, f"Homepage loaded in {load_time:.2f} s, which exceeds the {threshold}s limit"
+        return load_time
 
 
 
