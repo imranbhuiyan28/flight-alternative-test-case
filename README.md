@@ -1,41 +1,41 @@
 # 🧪 UI Test Automation Suite (Behave + Selenium)
 
-This repository contains a collection of automated UI test scenarios written using **Behave** (BDD) and **Selenium WebDriver**, focused on verifying the **responsiveness**, **layout integrity**, **navigation**, and **UX** of a web application across devices.
+This repository contains a comprehensive collection of automated UI test scenarios written using **Behave** (BDD) and **Selenium WebDriver**. The suite focuses on verifying the **responsiveness**, **layout integrity**, **navigation**, and **user experience (UX)** of a web application across various devices and screen sizes.
 
 ---
 
 ## 📁 Features Covered
 
 ### ✅ UI Responsiveness
-- Validates mobile and desktop layouts
-- Ensures no horizontal scroll or layout breakage
-- Confirms hamburger menu on mobile
+- Validate mobile and desktop layouts
+- Ensure no horizontal scroll or layout breakage
+- Confirm hamburger menu presence on mobile view
 
 ### ✅ UI/UX Verification
-- Visibility of key homepage elements: logo, navbar, hero section, footer
+- Check visibility of key homepage elements: logo, navigation bar, hero section, and footer
 
 ### ✅ Error Feedback
-- Tests user-facing error messages when submitting incomplete forms
+- Test user-facing error messages on incomplete form submissions
 
 ### ✅ Navigation
-- Validates footer and header navigation (e.g. About Us, header links)
+- Validate footer and header navigation links (e.g., About Us, header links)
 
 ### ✅ Performance
-- Page load time for homepage
-- Search response time within acceptable limits
+- Verify homepage loads within acceptable time
+- Ensure search responses appear promptly
 
 ### ✅ Header Elements
-- Verifies correct number of header links are present
+- Confirm correct number of header links are present
 
 ---
 
 ## 🚀 Getting Started
 
 ### 📦 Prerequisites
-- Python 3.8+
-- Chrome (or another supported browser)
-- ChromeDriver or relevant WebDriver installed and added to PATH
-- Virtual environment (recommended)
+- Python 3.8 or higher
+- Chrome browser (or other supported browsers)
+- Corresponding WebDriver installed and added to system PATH (e.g., ChromeDriver)
+- Recommended: Python virtual environment
 
 ### 🔧 Installation
 
@@ -43,6 +43,12 @@ This repository contains a collection of automated UI test scenarios written usi
 git clone https://github.com/yourusername/ui-test-suite.git
 cd ui-test-suite
 python -m venv .venv
-source .venv/bin/activate  # or .venv\Scripts\activate on Windows
+source .venv/bin/activate   # On Windows use: .venv\Scripts\activate
 pip install -r requirements.txt
 
+
+
+🎥 Demo Video
+For a quick overview and demo of the test suite in action, watch the video below:
+
+click here to watch on Loom:https://www.loom.com/share/69e0b84963ec4d7090be75853274c617?sid=a00a9e7b-fddd-4f64-8ec3-e6792e3a1a02
