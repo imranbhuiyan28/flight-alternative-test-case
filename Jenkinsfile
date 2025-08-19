@@ -22,16 +22,21 @@ pipeline {
 
         stage('Run Behave Tests') {
             steps {
-                sh './venv/bin/behave --tags=@smoke --format html --outfile reports/report.html'
+                // Run all tests with Allure formatter
+                sh './venv/bin/behave -f allure_behave.formatter:AllureFormatter -o reports/'
             }
         }
 
-        stage('Publish Report') {
+        stage('Generate Allure Report') {
             steps {
+                // Generate HTML report from Allure results
+                sh 'allure generate reports/ -o reports/html --clean'
+
+                // Publish in Jenkins
                 publishHTML(target: [
-                    reportName: 'Behave Test Report',
-                    reportDir: 'reports',
-                    reportFiles: 'report.html',
+                    reportName: 'Allure Report',
+                    reportDir: 'reports/html',
+                    reportFiles: 'index.html',
                     keepAll: true
                 ])
             }
@@ -40,7 +45,9 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: 'reports/*.html', allowEmptyArchive: true
+            // Archive Allure results
+            archiveArtifacts artifacts: 'reports/**', allowEmptyArchive: true
+            // Clean workspace after build
             cleanWs()
         }
     }
